@@ -1,7 +1,7 @@
 #pragma once
 #include "Screen.h"
 #include <SFML/Graphics.hpp>
-#include "SpriteObject.h"
+#include "Player.h"
 
 class Game;
 
@@ -16,7 +16,7 @@ public:
 
 private:
 
-    SpriteObject testSpriteObject;
+    Player playerObject;
 
 };
 

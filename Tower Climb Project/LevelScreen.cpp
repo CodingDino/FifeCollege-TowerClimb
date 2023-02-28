@@ -2,7 +2,7 @@
 
 LevelScreen::LevelScreen(Game* newGamePointer)
 	: Screen(newGamePointer)
-	, testSpriteObject("Assets/Graphics/PlayerStand.png")
+	, playerObject()
 {
 }
 
@@ -14,5 +14,5 @@ void LevelScreen::Update(sf::Time frameTime)
 void LevelScreen::DrawTo(sf::RenderTarget& target)
 {
 	// TODO: Draw level objects!
-	testSpriteObject.DrawTo(target);
+	playerObject.DrawTo(target);
 }
