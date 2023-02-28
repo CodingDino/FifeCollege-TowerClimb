@@ -2,6 +2,7 @@
 #include "Game.h"
 #include <stdlib.h>
 #include <time.h> 
+#include "AssetManager.h"
 
 int main()
 {
@@ -15,5 +16,7 @@ int main()
 	gameInstance.RunGameLoop();
 
 	// If we get here, the loop exited, so end the program by returning
+	// First clear all textures to avoid crash on exit due to SFML not liking static objects
+	AssetManager::DestroyAllAssets();
 	return 0;
 }

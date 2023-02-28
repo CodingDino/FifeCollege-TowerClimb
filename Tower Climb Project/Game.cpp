@@ -19,10 +19,11 @@ void Game::RunGameLoop()
 	// Repeat as long as the window is open
 	while (window.isOpen())
 	{
-		EventHandling();
 		Update();
 		Draw();
+		EventHandling();
 	}
+	true;
 }
 
 

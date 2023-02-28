@@ -1,6 +1,7 @@
 #pragma once
 #include "Screen.h"
 #include <SFML/Graphics.hpp>
+#include "SpriteObject.h"
 
 class Game;
 
@@ -15,8 +16,7 @@ public:
 
 private:
 
-    sf::Texture testTexture;
-    sf::Sprite testSprite;
+    SpriteObject testSpriteObject;
 
 };
 
