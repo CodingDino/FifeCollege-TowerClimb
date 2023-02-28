@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "LevelScreen.h"
 
 Game::Game()
 	: window(sf::VideoMode::getDesktopMode(), "Bunny Hop", sf::Style::Titlebar | sf::Style::Close)
@@ -9,7 +10,7 @@ Game::Game()
 	window.setMouseCursorVisible(false);
 
 	// TODO: Setup screens
-	currentScreen = new Screen(this);
+	currentScreen = new LevelScreen(this);
 }
 
 

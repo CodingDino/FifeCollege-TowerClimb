@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Screen.h"
+
+class Screen;
 
 class Game
 {

@@ -1,5 +1,6 @@
 #pragma once
 #include "Screen.h"
+#include <SFML/Graphics.hpp>
 
 class Game;
 
@@ -14,7 +15,8 @@ public:
 
 private:
 
-
+    sf::Texture testTexture;
+    sf::Sprite testSprite;
 
 };
 
