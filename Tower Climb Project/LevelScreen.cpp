@@ -3,6 +3,7 @@
 LevelScreen::LevelScreen(Game* newGamePointer)
 	: Screen(newGamePointer)
 	, playerObject()
+	, platformObject()
 {
 }
 
@@ -15,4 +16,5 @@ void LevelScreen::DrawTo(sf::RenderTarget& target)
 {
 	// TODO: Draw level objects!
 	playerObject.DrawTo(target);
+	platformObject.DrawTo(target);
 }
