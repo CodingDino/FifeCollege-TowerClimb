@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Screen.h"
 
 class Game
 {
@@ -17,5 +18,7 @@ public:
 private:
 	sf::RenderWindow window;
 	sf::Clock gameClock;
+
+	Screen* currentScreen;
 };
 

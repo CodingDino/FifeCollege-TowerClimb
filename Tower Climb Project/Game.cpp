@@ -3,11 +3,13 @@
 Game::Game()
 	: window(sf::VideoMode::getDesktopMode(), "Bunny Hop", sf::Style::Titlebar | sf::Style::Close)
 	, gameClock()
+	, currentScreen(nullptr)
 {
 	// Window setup
 	window.setMouseCursorVisible(false);
 
 	// TODO: Setup screens
+	currentScreen = new Screen(this);
 }
 
 
@@ -47,7 +49,9 @@ void Game::Update()
 {
 	sf::Time frameTime = gameClock.restart();
 
-	// TODO: Update current screen
+	// Update current screen
+	if (currentScreen != nullptr)
+		currentScreen->Update(frameTime);
 
 	// TODO: Handle change to other screens
 }
@@ -57,7 +61,9 @@ void Game::Draw()
 {
 	window.clear();
 
-	// TODO: Draw current screen
+	// Draw current screen
+	if (currentScreen != nullptr)
+		currentScreen->DrawTo(window);
 
 	window.display();
 }
